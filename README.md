@@ -76,23 +76,23 @@ line 23: return eval(user_input)
 ---
 
 
-
 ## 🏗️ Architecture
 
-
-Frontend (Streamlit UI)
-↓
-Backend (FastAPI)
-↓
-Review Engine
-├── Rule Engine
-├── Smart Scoring
-├── LLM Service (optional)
-↓
-Repository Scanner
-↓
+Frontend (Streamlit UI)  
+⬇  
+Backend (FastAPI)  
+⬇  
+Review Engine  
+⬇  
+Rule Engine  
+⬇  
+Smart Scoring  
+⬇  
+LLM Service (optional)  
+⬇  
+Repository Scanner  
+⬇  
 Report Generator
-
 
 
 
