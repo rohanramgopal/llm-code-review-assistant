@@ -78,52 +78,48 @@ line 23: return eval(user_input)
 ## 🏗️ Architecture
 
 
-frontend (Streamlit UI)
+Frontend (Streamlit UI)
 ↓
-backend (FastAPI)
+Backend (FastAPI)
 ↓
 Review Engine
 ├── Rule Engine
 ├── Smart Scoring
 ├── LLM Service (optional)
-├── Repo Scanner
+↓
+Repository Scanner
 ↓
 Report Generator
 
 
 ---
 
-## ⚙️ Tech Stack
+## 📂 Project Structure (fixed)
 
-- **Backend:** Python, FastAPI
-- **Frontend:** Streamlit
-- **AI Layer:** OpenAI / Ollama (optional)
-- **Database:** SQLite
-- **Reports:** Jinja2 (HTML), JSON
-- **Processing:** Custom Rule Engine
-
----
-
+```md
 ## 📂 Project Structure
 
 
-
-backend/
-├── app/
-│ ├── api/
-│ ├── core/
-│ ├── db/
-│ ├── models/
-│ ├── schemas/
-│ ├── services/
-│ ├── utils/
-│ └── main.py
-├── reports/
-├── requirements.txt
-
-frontend/
-└── app.py
-
+llm-code-review-assistant/
+│
+├── backend/
+│ ├── app/
+│ │ ├── api/
+│ │ ├── core/
+│ │ ├── db/
+│ │ ├── models/
+│ │ ├── schemas/
+│ │ ├── services/
+│ │ ├── utils/
+│ │ └── main.py
+│ │
+│ ├── reports/
+│ └── requirements.txt
+│
+├── frontend/
+│ └── app.py
+│
+└── README.md
 ---
 
 ## 🚀 Installation & Setup
