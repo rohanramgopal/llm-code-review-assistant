@@ -107,6 +107,7 @@ Report Generator
 ## 📂 Project Structure
 
 
+
 backend/
 ├── app/
 │ ├── api/
@@ -122,7 +123,6 @@ backend/
 
 frontend/
 └── app.py
-
 
 ---
 
