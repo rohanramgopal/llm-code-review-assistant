@@ -75,6 +75,8 @@ line 23: return eval(user_input)
 
 ---
 
+
+
 ## 🏗️ Architecture
 
 
@@ -94,10 +96,14 @@ Report Generator
 
 ---
 
-## 📂 Project Structure (fixed)
+
+
+---
+
+## 📂 Project Structure 
 
 ```md
-## 📂 Project Structure
+
 
 
 llm-code-review-assistant/
