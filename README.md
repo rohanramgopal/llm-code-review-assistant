@@ -101,7 +101,7 @@ Report Generator
 ```mermaid
 flowchart TD
 
-A[User / Developer] --> B[Streamlit Frontend]
+A[User or Developer] --> B[Streamlit Frontend]
 
 subgraph Frontend
     B --> F1[Code Input]
@@ -109,15 +109,14 @@ subgraph Frontend
     B --> F3[Review Dashboard]
 end
 
-B -->|REST API Calls| C[FastAPI Backend]
+B --> C[FastAPI Backend]
 
 subgraph Backend
     C --> D1[API Routes]
     D1 --> D2[Review Service]
-
     D2 --> S1[Rule Engine]
     D2 --> S2[Smart Scoring Engine]
-    D2 --> S3[LLM Service (Optional)]
+    D2 --> S3[LLM Service Optional]
     D2 --> S4[Repository Scanner]
 end
 
@@ -125,7 +124,7 @@ subgraph Processing
     S1 --> P1[Static Analysis]
     S2 --> P2[Score Calculation]
     S3 --> P3[LLM Insights]
-    S4 --> P4[Multi-file Parsing]
+    S4 --> P4[Multi File Parsing]
 end
 
 P1 --> R[Review Generator]
@@ -152,8 +151,6 @@ O4 --> J
 
 H --> B
 J --> B
-
-```
 
 ---
 
