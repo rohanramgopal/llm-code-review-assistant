@@ -93,10 +93,67 @@ LLM Service (optional)
 Repository Scanner  
 ⬇  
 Report Generator
+---
 
 
+## 🏗️ Architecture Diagram
 
+```mermaid
+flowchart TD
 
+A[User / Developer] --> B[Streamlit Frontend]
+
+subgraph Frontend
+    B --> F1[Code Input]
+    B --> F2[Repository Input]
+    B --> F3[Review Dashboard]
+end
+
+B -->|REST API Calls| C[FastAPI Backend]
+
+subgraph Backend
+    C --> D1[API Routes]
+    D1 --> D2[Review Service]
+
+    D2 --> S1[Rule Engine]
+    D2 --> S2[Smart Scoring Engine]
+    D2 --> S3[LLM Service (Optional)]
+    D2 --> S4[Repository Scanner]
+end
+
+subgraph Processing
+    S1 --> P1[Static Analysis]
+    S2 --> P2[Score Calculation]
+    S3 --> P3[LLM Insights]
+    S4 --> P4[Multi-file Parsing]
+end
+
+P1 --> R[Review Generator]
+P2 --> R
+P3 --> R
+P4 --> R
+
+subgraph Output
+    R --> O1[Summary]
+    R --> O2[Findings]
+    R --> O3[Severity Breakdown]
+    R --> O4[Refactored Code]
+end
+
+O1 --> H[HTML Report Generator]
+O2 --> H
+O3 --> H
+O4 --> H
+
+O1 --> J[JSON Report Generator]
+O2 --> J
+O3 --> J
+O4 --> J
+
+H --> B
+J --> B
+
+```
 
 ---
 
